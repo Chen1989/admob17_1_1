@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.util;
+package com.magiccube.exchange.util;
 
 /**
  * Created by PengChen on 2018/12/27.

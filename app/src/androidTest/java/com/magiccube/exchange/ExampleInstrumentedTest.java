@@ -1,4 +1,4 @@
-package com.cp.admob_sdk;
+package com.magiccube.exchange;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

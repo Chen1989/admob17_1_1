@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.util;
+package com.magiccube.exchange.util;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

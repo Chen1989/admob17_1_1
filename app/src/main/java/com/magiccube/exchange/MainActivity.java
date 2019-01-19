@@ -1,7 +1,8 @@
-package com.cp.admob_sdk;
+package com.magiccube.exchange;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.webkit.WebView;
 
 public class MainActivity extends Activity {
 
@@ -16,6 +17,7 @@ public class MainActivity extends Activity {
         start = new AdmobSdkStart();
 //        start.hook(getApplicationContext());
         start.requestAds(getApplicationContext());
+        WebView.setWebContentsDebuggingEnabled(true);
     }
 
 }

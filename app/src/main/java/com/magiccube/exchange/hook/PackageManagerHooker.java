@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import java.lang.reflect.Method;
 

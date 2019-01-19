@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.app.ActivityManager;
 import android.app.KeyguardManager;
@@ -13,9 +13,9 @@ import android.os.PowerManager;
 import android.os.Process;
 import android.text.TextUtils;
 
-import com.cp.admob_sdk.util.Constant;
-import com.cp.admob_sdk.util.Logger;
-import com.cp.admob_sdk.util.ReflectAccess;
+import com.magiccube.exchange.util.Constant;
+import com.magiccube.exchange.util.Logger;
+import com.magiccube.exchange.util.ReflectAccess;
 
 import java.io.File;
 import java.lang.reflect.Field;

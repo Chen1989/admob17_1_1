@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
@@ -7,8 +7,8 @@ import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.text.TextUtils;
 
-import com.cp.admob_sdk.util.Constant;
-import com.cp.admob_sdk.util.Logger;
+import com.magiccube.exchange.util.Constant;
+import com.magiccube.exchange.util.Logger;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;

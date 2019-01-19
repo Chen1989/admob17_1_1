@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -8,9 +8,9 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
 
-import com.cp.admob_sdk.util.Constant;
-import com.cp.admob_sdk.util.Logger;
-import com.cp.admob_sdk.util.ReflectAccess;
+import com.magiccube.exchange.util.Constant;
+import com.magiccube.exchange.util.Logger;
+import com.magiccube.exchange.util.ReflectAccess;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -88,8 +88,8 @@ public class PackageAssist {
         if (!TextUtils.isEmpty(getInstance().replacePkg))
             return;
 
-        if (isReplacePkg(replacePkg))
-            return;
+//        if (isReplacePkg(replacePkg))
+//            return;
         mAppLabel = appLabel;
         getInstance().replacePkg = replacePkg;
 
@@ -165,6 +165,10 @@ public class PackageAssist {
         //admob更换包名请求失败的问题
         @Override
         public String getPackageResourcePath() {
+            for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
+                Logger.i("getPackageResourcePath = " + element.toString());
+            }
+            Logger.i("getPackageResourcePath ============================== ");
             if (realPkg.equals(providerPName) || TextUtils.isEmpty(providerPName)) {
                 return super.getPackageResourcePath();
             }
@@ -196,9 +200,9 @@ public class PackageAssist {
 
         @Override
         public String getPackageName() {
-            if (realPkg.equals(providerPName) || TextUtils.isEmpty(providerPName)) {
-                return realPkg;
-            }
+//            if (realPkg.equals(providerPName) || TextUtils.isEmpty(providerPName)) {
+//                return realPkg;
+//            }
             for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
                 Logger.i("getPackageName = " + element.toString());
             }

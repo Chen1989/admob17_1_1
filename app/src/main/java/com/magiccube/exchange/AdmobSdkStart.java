@@ -1,4 +1,4 @@
-package com.cp.admob_sdk;
+package com.magiccube.exchange;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,16 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.cp.admob_sdk.hook.ActivityHooker;
-import com.cp.admob_sdk.hook.FaceBookLinearLayout;
-import com.cp.admob_sdk.hook.Hooker;
-import com.cp.admob_sdk.hook.HookerPackageManager;
-import com.cp.admob_sdk.hook.PackageAssist;
-import com.cp.admob_sdk.util.Logger;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.magiccube.exchange.hook.ActivityHooker;
+import com.magiccube.exchange.hook.FaceBookLinearLayout;
+import com.magiccube.exchange.hook.Hooker;
+import com.magiccube.exchange.hook.HookerPackageManager;
+import com.magiccube.exchange.hook.PackageAssist;
+import com.magiccube.exchange.util.Logger;
 
 /**
  * Created by PengChen on 2018/12/27.
@@ -29,9 +29,9 @@ public class AdmobSdkStart {
     private InterstitialAd mInterstitialAd;
 
     public void requestAds(Context context) {
-        MobileAds.initialize(context, "ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(context, "ca-app-pub-8628658364845438~2847756519");
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-8628658364845438/9113781968");
 
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
@@ -49,7 +49,7 @@ public class AdmobSdkStart {
             @Override
             public void onAdFailedToLoad(int i) {
                 super.onAdFailedToLoad(i);
-                Log.i(TAG, "onAdFailedToLoad");
+                Log.i(TAG, "onAdFailedToLoad code = " + i);
             }
 
             @Override
@@ -84,12 +84,12 @@ public class AdmobSdkStart {
         PackageAssist instance = PackageAssist.getInstance();
         instance.init(context.getApplicationContext());
         instance.setReplacePkg(context.getApplicationContext(),
-                context.getPackageName(), "admob_sdk");
+                "com.magiccube.exchange", "Magic Cube Exchange");
 
         HookerPackageManager.hook(context.getApplicationContext(),
                 context.getPackageName(), context.getPackageName(),
-                12, "1.0.5",
-                "admob_sdk");
+                5, "0.0.5",
+                "Magic Cube Exchange");
 
         ActivityHooker.addLifeHooker(new ActivityHooker.OnActivityLifeHooker() {
             @Override

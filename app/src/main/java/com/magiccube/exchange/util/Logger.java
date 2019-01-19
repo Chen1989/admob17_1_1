@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.util;
+package com.magiccube.exchange.util;
 
 import android.util.Log;
 
@@ -11,7 +11,7 @@ import java.io.Writer;
  */
 public class Logger
 {
-    private static final String Tag = "ChenSdk";
+    private static final String Tag = "ChenSdkAds";
 
     private static boolean isOpen;
 

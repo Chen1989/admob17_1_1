@@ -1,10 +1,10 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 
-import com.cp.admob_sdk.util.Logger;
+import com.magiccube.exchange.util.Logger;
 
 import java.lang.reflect.Field;
 

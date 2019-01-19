@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.content.SharedPreferences;
 import android.support.annotation.Nullable;

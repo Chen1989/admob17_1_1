@@ -1,4 +1,4 @@
-package com.cp.admob_sdk.hook;
+package com.magiccube.exchange.hook;
 
 import android.app.Activity;
 import android.app.Instrumentation;
@@ -6,8 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.cp.admob_sdk.util.Logger;
-import com.cp.admob_sdk.util.ReflectAccess;
+import com.magiccube.exchange.util.Logger;
+import com.magiccube.exchange.util.ReflectAccess;
 
 public class ActivityHooker {
 

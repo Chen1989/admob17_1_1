@@ -1,4 +1,4 @@
-package com.cp.admob_sdk;
+package com.magiccube.exchange;
 
 import org.junit.Test;
 
